@@ -17,7 +17,6 @@ public class TaskController {
 
     @RequestMapping(method = RequestMethod.GET, value = "getTasks")
     public List<TaskDto> getTasks() {
-        System.out.println("run method: TaskController.getTasks()");
         return new ArrayList<>();
     }
 
@@ -31,7 +30,7 @@ public class TaskController {
 
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "updateTask")
+    @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
     public TaskDto updateTask(TaskDto taskDto) {
         return new TaskDto(1l, "TEST - EDITED TITLE", "TEST - EDITED CONTENT");
     }
